@@ -74,6 +74,11 @@
                 <version>${wicket.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.apache.wicket</groupId>
+                <artifactId>wicket-request</artifactId>
+                <version>${wicket.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-slf4j-impl</artifactId>
                 <version>${log4j.version}</version>
@@ -97,38 +102,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <build>
-        <resources>
-            <resource>
-                <filtering>false</filtering>
-                <directory>animatedajaxcontainer/src/main/resources</directory>
-            </resource>
-            <resource>
-                <filtering>false</filtering>
-                <directory>animatedajaxcontainer/src/main/java</directory>
-                <includes>
-                    <include>**</include>
-                </includes>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
-        </resources>
-        <testResources>
-            <testResource>
-                <filtering>false</filtering>
-                <directory>animatedajaxcontainer/src/test/resources</directory>
-            </testResource>
-            <testResource>
-                <filtering>false</filtering>
-                <directory>animatedajaxcontainer/src/test/java</directory>
-                <includes>
-                    <include>**</include>
-                </includes>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </testResource>
-        </testResources>
-    </build>
 </project>
