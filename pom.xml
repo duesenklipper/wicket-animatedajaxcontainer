@@ -60,6 +60,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- allowed values: R7, 1.0, 1.5, 2.0 or none -->
         <wtp.version>none</wtp.version>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     <dependencyManagement>
         <dependencies>
