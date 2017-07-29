@@ -24,12 +24,20 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 public class HomePage extends WebPage
 {
 	private static final long serialVersionUID = 1L;
+	private boolean showComponent = false;
 
 	public HomePage(final PageParameters parameters)
 	{
 		super(parameters);
 		final AutoAnimatingContainer container =
-				new AutoAnimatingContainer("container");
+				new AutoAnimatingContainer("container") {
+					@Override
+					protected void onConfigure()
+					{
+						super.onConfigure();
+						setVisible(showComponent);
+					}
+				};
 		this.add(container);
 		this.add(new AjaxLink<Void>("toggle")
 		{
@@ -37,7 +45,7 @@ public class HomePage extends WebPage
 			public void onClick(AjaxRequestTarget ajax)
 			{
 				ajax.add(container);
-				container.setVisible(!container.isVisible());
+				showComponent = !showComponent;
 			}
 		});
 	}
