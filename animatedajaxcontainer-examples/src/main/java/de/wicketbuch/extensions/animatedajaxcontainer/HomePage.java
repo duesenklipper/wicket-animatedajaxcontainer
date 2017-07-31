@@ -18,6 +18,7 @@ package de.wicketbuch.extensions.animatedajaxcontainer;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
+import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
@@ -29,8 +30,8 @@ public class HomePage extends WebPage
 	public HomePage(final PageParameters parameters)
 	{
 		super(parameters);
-		final AutoAnimatingContainer container =
-				new AutoAnimatingContainer("container") {
+		final WebMarkupContainer container =
+				new WebMarkupContainer("container") {
 					@Override
 					protected void onConfigure()
 					{
@@ -38,8 +39,9 @@ public class HomePage extends WebPage
 						setVisible(showComponent);
 					}
 				};
+		container.add(new AjaxAutoAnimatingBehavior());
 		this.add(container);
-		this.add(new AjaxLink<Void>("toggle")
+		this.add(new AjaxLink<Void>("toggleAjax")
 		{
 			@Override
 			public void onClick(AjaxRequestTarget ajax)
