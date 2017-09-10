@@ -25,7 +25,7 @@
     <groupId>de.wicketbuch.extensions.animatedajaxcontainer</groupId>
     <artifactId>animatedajaxcontainer-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0.wicket7-SNAPSHOT</version>
+    <version>1.1.0.wicket7-SNAPSHOT</version>
     <name>animatedajaxcontainer</name>
     <description>A container component for Apache Wicket that
         automatically animates itself if its visibility changes.
