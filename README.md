@@ -23,7 +23,7 @@ For a different animation, override ```AjaxAutoAnimatingBehavior#getOpenAnimatio
 
     <dependency>
         <groupId>de.wicketbuch.extensions</groupId>
-        <artifactId>appendablerepeater</artifactId>
+        <artifactId>animatedajaxcontainer</artifactId>
         <version>1.0.0.wicket7</version>
     </dependency>
 
