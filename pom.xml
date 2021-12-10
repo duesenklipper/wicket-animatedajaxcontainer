@@ -55,7 +55,7 @@
     <properties>
         <wicket.version>7.8.0</wicket.version>
         <jetty9.version>9.2.19.v20160908</jetty9.version>
-        <log4j.version>2.6.2</log4j.version>
+        <log4j.version>2.15.0</log4j.version>
         <junit.version>4.13.1</junit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- allowed values: R7, 1.0, 1.5, 2.0 or none -->
